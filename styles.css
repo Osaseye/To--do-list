@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+h1{
+    transform: translateX(30deg);
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#theme-toggle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#theme-toggle:hover {
+    background: #bbb;
+}
+.task-input {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.task-input input, .task-input select, .task-input button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.task-input button {
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.task-input button:hover {
+    background: white;
+    color: black;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: #eee;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+li:active {
+    transform: scale(1.02);
+}
+li:hover{
+    border: 1px solid grey;
+}
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+.task-actions button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.edit { background: #ffc107; }
+.delete { background: #dc3545; }
+.pin { background: #17a2b8; }
+.edit:hover {
+     background: white; 
+     color:  #e0a800;
+}
+.delete:hover { 
+background: white;
+color: #c82333;
+}
+.pin:hover {
+ background: white;
+ color: #17a2b8;
+}
+.dark-mode { background: #333; color: #fff; }
+.dark-mode .container { background: #444; }
+.dark-mode li { background: #444; }
+.dark-mode .edit{
+    background: white; 
+    color:  #e0a800;
+}
+.dark-mode .delete{
+    background: white;
+    color: #c82333;
+}
+.dark-mode .pin{
+    background: white;
+    color: #17a2b8;
+}
